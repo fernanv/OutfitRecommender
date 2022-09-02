@@ -1,0 +1,6 @@
+framework module Pods_OutfitRecommender {
+  umbrella header "Pods-OutfitRecommender-umbrella.h"
+
+  export *
+  module * { export * }
+}

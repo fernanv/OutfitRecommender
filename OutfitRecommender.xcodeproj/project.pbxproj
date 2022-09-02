@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		063D4AE827FB3E6E00B993AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D4AE727FB3E6E00B993AF /* AppDelegate.swift */; };
+		063D4AEA27FB3E6E00B993AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D4AE927FB3E6E00B993AF /* SceneDelegate.swift */; };
+		063D4AEC27FB3E6E00B993AF /* GarmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D4AEB27FB3E6E00B993AF /* GarmentsViewController.swift */; };
+		063D4AEF27FB3E6E00B993AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 063D4AED27FB3E6E00B993AF /* Main.storyboard */; };
+		063D4AF427FB3E7100B993AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063D4AF327FB3E7100B993AF /* Assets.xcassets */; };
+		063D4AF727FB3E7100B993AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 063D4AF527FB3E7100B993AF /* LaunchScreen.storyboard */; };
+		063D4AFF27FB401000B993AF /* GarmentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D4AFE27FB401000B993AF /* GarmentsTableViewCell.swift */; };
+		063D4B0127FB404400B993AF /* GarmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063D4B0027FB404400B993AF /* GarmentsCollectionViewCell.swift */; };
+		065A9C202829542E003E5BD0 /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A9C1F2829542E003E5BD0 /* WeatherCollectionViewCell.swift */; };
+		065A9C222829545B003E5BD0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A9C212829545B003E5BD0 /* HomeViewController.swift */; };
+		065A9C2428296BDD003E5BD0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A9C2328296BDD003E5BD0 /* Login.swift */; };
+		0665AD4E28296EA700D8B1BC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665AD4D28296EA700D8B1BC /* Profile.swift */; };
+		0665AD5028296ED000D8B1BC /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665AD4F28296ED000D8B1BC /* Register.swift */; };
+		067B735228296FE100F4CA19 /* Spacers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B735128296FE100F4CA19 /* Spacers.swift */; };
+		067B735428297D5100F4CA19 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B735328297D5100F4CA19 /* UserViewController.swift */; };
+		06839C5F281849AC007B2720 /* Garment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06839C5E281849AC007B2720 /* Garment+CoreDataProperties.swift */; };
+		06839C61281849BD007B2720 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06839C60281849BD007B2720 /* User+CoreDataProperties.swift */; };
+		06839C63281849CC007B2720 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06839C62281849CC007B2720 /* User+CoreDataClass.swift */; };
+		06839C65281849D2007B2720 /* Garment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06839C64281849D2007B2720 /* Garment+CoreDataClass.swift */; };
+		06A422E4282C011200551757 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A422E3282C011200551757 /* UserViewModel.swift */; };
+		06BDC7362826CFD20031C768 /* WeatherRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BDC7352826CFD20031C768 /* WeatherRequests.swift */; };
+		06BDC7382826CFF20031C768 /* LocationWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BDC7372826CFF20031C768 /* LocationWeather.swift */; };
+		06D88D6A280EFF4600D53638 /* ImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D88D69280EFF4600D53638 /* ImageTransformer.swift */; };
+		06D88D6C280F0E0D00D53638 /* AttachGarmentPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D88D6B280F0E0D00D53638 /* AttachGarmentPhotoViewController.swift */; };
+		06D88D6E280F0FB900D53638 /* AddGarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D88D6D280F0FB900D53638 /* AddGarmentViewController.swift */; };
+		06F7F54D27FC47FE0077F383 /* GarmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7F54C27FC47FE0077F383 /* GarmentDetailViewController.swift */; };
+		06FA593227FF3B6E006D7E85 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA593127FF3B6E006D7E85 /* CoreDataStack.swift */; };
+		5D0E3AB028477F7C003FF85A /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0E3AAF28477F7C003FF85A /* NewPassword.swift */; };
+		5D9BEC3F2850CC9100D5164D /* WeatherDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BEC3E2850CC9100D5164D /* WeatherDayViewController.swift */; };
+		5D9BEC412850F7C400D5164D /* MosaicLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BEC402850F7C400D5164D /* MosaicLayout.swift */; };
+		5DA0E92228849688008EF12C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DA0E92128849688008EF12C /* Main_iPad.storyboard */; };
+		5DBAA34D2875A4B500E8F741 /* OutfitRecommender.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5DBAA34B2875A4B500E8F741 /* OutfitRecommender.xcdatamodeld */; };
+		5DFF31942853A4CF003AA88E /* GarmentsCustomHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF31932853A4CF003AA88E /* GarmentsCustomHeaderSection.swift */; };
+		D1D7DF171302E08712C45596 /* Pods_OutfitRecommender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00C221038B3F0E8E0B171E4 /* Pods_OutfitRecommender.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		063D4AE427FB3E6E00B993AF /* OutfitRecommender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutfitRecommender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		063D4AE727FB3E6E00B993AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		063D4AE927FB3E6E00B993AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		063D4AEB27FB3E6E00B993AF /* GarmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsViewController.swift; sourceTree = "<group>"; };
+		063D4AEE27FB3E6E00B993AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		063D4AF327FB3E7100B993AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		063D4AF627FB3E7100B993AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		063D4AF827FB3E7100B993AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "/Users/fernan/Library/Mobile Documents/com~apple~CloudDocs/Desktop/iOS/Desarrollo de apps iOS/OutfitRecommender/OutfitRecommender/Info.plist"; sourceTree = "<absolute>"; };
+		063D4AFE27FB401000B993AF /* GarmentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsTableViewCell.swift; sourceTree = "<group>"; };
+		063D4B0027FB404400B993AF /* GarmentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		065A9C1F2829542E003E5BD0 /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		065A9C212829545B003E5BD0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		065A9C2328296BDD003E5BD0 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0665AD4D28296EA700D8B1BC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		0665AD4F28296ED000D8B1BC /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		067B735128296FE100F4CA19 /* Spacers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacers.swift; sourceTree = "<group>"; };
+		067B735328297D5100F4CA19 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		06839C5E281849AC007B2720 /* Garment+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Garment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		06839C60281849BD007B2720 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		06839C62281849CC007B2720 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		06839C64281849D2007B2720 /* Garment+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Garment+CoreDataClass.swift"; sourceTree = "<group>"; };
+		06A422E3282C011200551757 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		06BDC7352826CFD20031C768 /* WeatherRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequests.swift; sourceTree = "<group>"; };
+		06BDC7372826CFF20031C768 /* LocationWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeather.swift; sourceTree = "<group>"; };
+		06D88D69280EFF4600D53638 /* ImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTransformer.swift; sourceTree = "<group>"; };
+		06D88D6B280F0E0D00D53638 /* AttachGarmentPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachGarmentPhotoViewController.swift; sourceTree = "<group>"; };
+		06D88D6D280F0FB900D53638 /* AddGarmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentViewController.swift; sourceTree = "<group>"; };
+		06F7F54C27FC47FE0077F383 /* GarmentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentDetailViewController.swift; sourceTree = "<group>"; };
+		06FA593127FF3B6E006D7E85 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		29E16BE29349476F8C63866F /* Pods-Armario.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armario.release.xcconfig"; path = "Target Support Files/Pods-Armario/Pods-Armario.release.xcconfig"; sourceTree = "<group>"; };
+		5D0E3AAF28477F7C003FF85A /* NewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
+		5D9BEC3E2850CC9100D5164D /* WeatherDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayViewController.swift; sourceTree = "<group>"; };
+		5D9BEC402850F7C400D5164D /* MosaicLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicLayout.swift; sourceTree = "<group>"; };
+		5DA0E92128849688008EF12C /* Main_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		5DBAA34C2875A4B500E8F741 /* OutfitRecommender.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OutfitRecommender.xcdatamodel; sourceTree = "<group>"; };
+		5DFF31932853A4CF003AA88E /* GarmentsCustomHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsCustomHeaderSection.swift; sourceTree = "<group>"; };
+		6189B8B485F0A2183AB0EA2D /* Pods-OutfitRecommender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitRecommender.release.xcconfig"; path = "Target Support Files/Pods-OutfitRecommender/Pods-OutfitRecommender.release.xcconfig"; sourceTree = "<group>"; };
+		7FE2EC5BD210E7D5E3EBEAD7 /* Pods-OutfitRecommender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutfitRecommender.debug.xcconfig"; path = "Target Support Files/Pods-OutfitRecommender/Pods-OutfitRecommender.debug.xcconfig"; sourceTree = "<group>"; };
+		A00C221038B3F0E8E0B171E4 /* Pods_OutfitRecommender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutfitRecommender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1029778A18DAF2FAF350E5B /* Pods-Armario.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Armario.debug.xcconfig"; path = "Target Support Files/Pods-Armario/Pods-Armario.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		063D4AE127FB3E6E00B993AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1D7DF171302E08712C45596 /* Pods_OutfitRecommender.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		063D4ADB27FB3E6E00B993AF = {
+			isa = PBXGroup;
+			children = (
+				063D4AE627FB3E6E00B993AF /* OutfitRecommender */,
+				063D4AE527FB3E6E00B993AF /* Products */,
+				9623532870E21DCFA34186FD /* Pods */,
+				3407D126CE271E3C905A7E02 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		063D4AE527FB3E6E00B993AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				063D4AE427FB3E6E00B993AF /* OutfitRecommender.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		063D4AE627FB3E6E00B993AF /* OutfitRecommender */ = {
+			isa = PBXGroup;
+			children = (
+				063D4AE727FB3E6E00B993AF /* AppDelegate.swift */,
+				063D4AE927FB3E6E00B993AF /* SceneDelegate.swift */,
+				5D79A9732851E691003BD728 /* Outfit */,
+				5DF5781428451A6C005E3D43 /* UserGarments */,
+				06BF7408282AA8F30090CDFB /* User */,
+				06FA593327FF3BD7006D7E85 /* CoreData */,
+				063D4AED27FB3E6E00B993AF /* Main.storyboard */,
+				5DA0E92128849688008EF12C /* Main_iPad.storyboard */,
+				063D4AF527FB3E7100B993AF /* LaunchScreen.storyboard */,
+				5DBAA34B2875A4B500E8F741 /* OutfitRecommender.xcdatamodeld */,
+				063D4AF327FB3E7100B993AF /* Assets.xcassets */,
+				063D4AF827FB3E7100B993AF /* Info.plist */,
+			);
+			path = OutfitRecommender;
+			sourceTree = "<group>";
+		};
+		06BF7408282AA8F30090CDFB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				067B735328297D5100F4CA19 /* UserViewController.swift */,
+				065A9C2328296BDD003E5BD0 /* Login.swift */,
+				0665AD4D28296EA700D8B1BC /* Profile.swift */,
+				0665AD4F28296ED000D8B1BC /* Register.swift */,
+				067B735128296FE100F4CA19 /* Spacers.swift */,
+				06A422E3282C011200551757 /* UserViewModel.swift */,
+				5D0E3AAF28477F7C003FF85A /* NewPassword.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		06FA593327FF3BD7006D7E85 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				06839C64281849D2007B2720 /* Garment+CoreDataClass.swift */,
+				06839C62281849CC007B2720 /* User+CoreDataClass.swift */,
+				06839C60281849BD007B2720 /* User+CoreDataProperties.swift */,
+				06839C5E281849AC007B2720 /* Garment+CoreDataProperties.swift */,
+				06FA593127FF3B6E006D7E85 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3407D126CE271E3C905A7E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00C221038B3F0E8E0B171E4 /* Pods_OutfitRecommender.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D79A9732851E691003BD728 /* Outfit */ = {
+			isa = PBXGroup;
+			children = (
+				065A9C212829545B003E5BD0 /* HomeViewController.swift */,
+				065A9C1F2829542E003E5BD0 /* WeatherCollectionViewCell.swift */,
+				5D9BEC3E2850CC9100D5164D /* WeatherDayViewController.swift */,
+				06BDC7352826CFD20031C768 /* WeatherRequests.swift */,
+				06BDC7372826CFF20031C768 /* LocationWeather.swift */,
+				5D9BEC402850F7C400D5164D /* MosaicLayout.swift */,
+			);
+			path = Outfit;
+			sourceTree = "<group>";
+		};
+		5DF5781428451A6C005E3D43 /* UserGarments */ = {
+			isa = PBXGroup;
+			children = (
+				063D4AEB27FB3E6E00B993AF /* GarmentsViewController.swift */,
+				063D4AFE27FB401000B993AF /* GarmentsTableViewCell.swift */,
+				063D4B0027FB404400B993AF /* GarmentsCollectionViewCell.swift */,
+				06F7F54C27FC47FE0077F383 /* GarmentDetailViewController.swift */,
+				06D88D6D280F0FB900D53638 /* AddGarmentViewController.swift */,
+				06D88D6B280F0E0D00D53638 /* AttachGarmentPhotoViewController.swift */,
+				5DFF31932853A4CF003AA88E /* GarmentsCustomHeaderSection.swift */,
+				06D88D69280EFF4600D53638 /* ImageTransformer.swift */,
+			);
+			path = UserGarments;
+			sourceTree = "<group>";
+		};
+		9623532870E21DCFA34186FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1029778A18DAF2FAF350E5B /* Pods-Armario.debug.xcconfig */,
+				29E16BE29349476F8C63866F /* Pods-Armario.release.xcconfig */,
+				7FE2EC5BD210E7D5E3EBEAD7 /* Pods-OutfitRecommender.debug.xcconfig */,
+				6189B8B485F0A2183AB0EA2D /* Pods-OutfitRecommender.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		063D4AE327FB3E6E00B993AF /* OutfitRecommender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 063D4AFB27FB3E7100B993AF /* Build configuration list for PBXNativeTarget "OutfitRecommender" */;
+			buildPhases = (
+				D10432B8B62D33DE74510767 /* [CP] Check Pods Manifest.lock */,
+				063D4AE027FB3E6E00B993AF /* Sources */,
+				063D4AE127FB3E6E00B993AF /* Frameworks */,
+				063D4AE227FB3E6E00B993AF /* Resources */,
+				F38B1C7265C6634A198B8D2C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OutfitRecommender;
+			productName = Armario;
+			productReference = 063D4AE427FB3E6E00B993AF /* OutfitRecommender.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		063D4ADC27FB3E6E00B993AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					063D4AE327FB3E6E00B993AF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 063D4ADF27FB3E6E00B993AF /* Build configuration list for PBXProject "OutfitRecommender" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 063D4ADB27FB3E6E00B993AF;
+			productRefGroup = 063D4AE527FB3E6E00B993AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				063D4AE327FB3E6E00B993AF /* OutfitRecommender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		063D4AE227FB3E6E00B993AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063D4AF727FB3E7100B993AF /* LaunchScreen.storyboard in Resources */,
+				5DA0E92228849688008EF12C /* Main_iPad.storyboard in Resources */,
+				063D4AF427FB3E7100B993AF /* Assets.xcassets in Resources */,
+				063D4AEF27FB3E6E00B993AF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D10432B8B62D33DE74510767 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OutfitRecommender-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F38B1C7265C6634A198B8D2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutfitRecommender/Pods-OutfitRecommender-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OutfitRecommender/Pods-OutfitRecommender-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OutfitRecommender/Pods-OutfitRecommender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		063D4AE027FB3E6E00B993AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063D4AEC27FB3E6E00B993AF /* GarmentsViewController.swift in Sources */,
+				06F7F54D27FC47FE0077F383 /* GarmentDetailViewController.swift in Sources */,
+				06BDC7362826CFD20031C768 /* WeatherRequests.swift in Sources */,
+				063D4AE827FB3E6E00B993AF /* AppDelegate.swift in Sources */,
+				5D0E3AB028477F7C003FF85A /* NewPassword.swift in Sources */,
+				063D4B0127FB404400B993AF /* GarmentsCollectionViewCell.swift in Sources */,
+				067B735428297D5100F4CA19 /* UserViewController.swift in Sources */,
+				063D4AEA27FB3E6E00B993AF /* SceneDelegate.swift in Sources */,
+				0665AD5028296ED000D8B1BC /* Register.swift in Sources */,
+				06839C5F281849AC007B2720 /* Garment+CoreDataProperties.swift in Sources */,
+				06D88D6A280EFF4600D53638 /* ImageTransformer.swift in Sources */,
+				06839C65281849D2007B2720 /* Garment+CoreDataClass.swift in Sources */,
+				065A9C202829542E003E5BD0 /* WeatherCollectionViewCell.swift in Sources */,
+				063D4AFF27FB401000B993AF /* GarmentsTableViewCell.swift in Sources */,
+				065A9C2428296BDD003E5BD0 /* Login.swift in Sources */,
+				06FA593227FF3B6E006D7E85 /* CoreDataStack.swift in Sources */,
+				06BDC7382826CFF20031C768 /* LocationWeather.swift in Sources */,
+				06839C61281849BD007B2720 /* User+CoreDataProperties.swift in Sources */,
+				067B735228296FE100F4CA19 /* Spacers.swift in Sources */,
+				5DBAA34D2875A4B500E8F741 /* OutfitRecommender.xcdatamodeld in Sources */,
+				0665AD4E28296EA700D8B1BC /* Profile.swift in Sources */,
+				06D88D6C280F0E0D00D53638 /* AttachGarmentPhotoViewController.swift in Sources */,
+				06D88D6E280F0FB900D53638 /* AddGarmentViewController.swift in Sources */,
+				5D9BEC412850F7C400D5164D /* MosaicLayout.swift in Sources */,
+				5D9BEC3F2850CC9100D5164D /* WeatherDayViewController.swift in Sources */,
+				065A9C222829545B003E5BD0 /* HomeViewController.swift in Sources */,
+				06A422E4282C011200551757 /* UserViewModel.swift in Sources */,
+				06839C63281849CC007B2720 /* User+CoreDataClass.swift in Sources */,
+				5DFF31942853A4CF003AA88E /* GarmentsCustomHeaderSection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		063D4AED27FB3E6E00B993AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				063D4AEE27FB3E6E00B993AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		063D4AF527FB3E7100B993AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				063D4AF627FB3E7100B993AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		063D4AF927FB3E7100B993AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		063D4AFA27FB3E7100B993AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		063D4AFC27FB3E7100B993AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FE2EC5BD210E7D5E3EBEAD7 /* Pods-OutfitRecommender.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M77TFH6HTH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OutfitRecommender/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DressUp!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location when using the App";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.DressUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		063D4AFD27FB3E7100B993AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6189B8B485F0A2183AB0EA2D /* Pods-OutfitRecommender.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M77TFH6HTH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OutfitRecommender/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DressUp!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Allow location when using the App";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.DressUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		063D4ADF27FB3E6E00B993AF /* Build configuration list for PBXProject "OutfitRecommender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063D4AF927FB3E7100B993AF /* Debug */,
+				063D4AFA27FB3E7100B993AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		063D4AFB27FB3E7100B993AF /* Build configuration list for PBXNativeTarget "OutfitRecommender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				063D4AFC27FB3E7100B993AF /* Debug */,
+				063D4AFD27FB3E7100B993AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5DBAA34B2875A4B500E8F741 /* OutfitRecommender.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5DBAA34C2875A4B500E8F741 /* OutfitRecommender.xcdatamodel */,
+			);
+			currentVersion = 5DBAA34C2875A4B500E8F741 /* OutfitRecommender.xcdatamodel */;
+			path = OutfitRecommender.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 063D4ADC27FB3E6E00B993AF /* Project object */;
+}
