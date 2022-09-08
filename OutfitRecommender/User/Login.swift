@@ -118,7 +118,7 @@ struct Login: View {
     }
 
     struct Login_Previews: PreviewProvider {
-        static var usuario = UserViewModel(coreDataStack: CoreDataStack())
+        static var usuario = UserViewModel()
         static var previews: some View {
             Group {
                 Login(login: Binding.constant(true), perfil: Binding.constant(false), usuario: usuario)

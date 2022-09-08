@@ -1,24 +1,34 @@
 PODS:
   - Alamofire (5.6.1)
+  - CHTCollectionViewWaterfallLayout (0.9.10):
+    - CHTCollectionViewWaterfallLayout/Swift (= 0.9.10)
+  - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
   - DropDown (2.3.13)
   - LocationPickerViewController (3.4)
+  - Swinject (2.8.2)
 
 DEPENDENCIES:
   - Alamofire
+  - CHTCollectionViewWaterfallLayout
   - DropDown
   - LocationPickerViewController
+  - Swinject
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CHTCollectionViewWaterfallLayout
     - DropDown
     - LocationPickerViewController
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   LocationPickerViewController: 4f33d63587bca682267a09779de2b2e09cf5b8e2
+  Swinject: b4a11b31992e8668308dc594ba1cb9b3164a37ab
 
-PODFILE CHECKSUM: 3b70cb79de59f4551b7f9bb375097f0949e446b4
+PODFILE CHECKSUM: 1d7f4cb2c36bc41676cf205dbc55305ccb374cdd
 
 COCOAPODS: 1.11.3

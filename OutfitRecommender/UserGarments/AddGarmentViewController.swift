@@ -11,7 +11,7 @@ import DropDown
 
 class AddGarmentViewController : UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
-    var usuario: UserViewModel
+    var usuario: UserViewModel!
     
     var managedContext: NSManagedObjectContext! {
         get
@@ -45,7 +45,7 @@ class AddGarmentViewController : UIViewController, UITextFieldDelegate, UITextVi
     let dropDownTypes = DropDown()
     let dropDownColors = DropDown()
     
-    init(usuario: UserViewModel) {
+    /*init(usuario: UserViewModel) {
         self.usuario = usuario
         
         super.init(nibName: nil, bundle: nil)
@@ -53,7 +53,7 @@ class AddGarmentViewController : UIViewController, UITextFieldDelegate, UITextVi
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
     
     override func viewDidLoad() {
         
@@ -130,7 +130,7 @@ class AddGarmentViewController : UIViewController, UITextFieldDelegate, UITextVi
         })
         
         let createAction = UIAlertAction(title: "Create",
-                                       style: .destructive,
+                                         style: .default,
                                        handler: { (action: UIAlertAction!) in
                                             self.newGarment()
         })
@@ -146,11 +146,54 @@ class AddGarmentViewController : UIViewController, UITextFieldDelegate, UITextVi
     
     private func newGarment(){
 
-        self.garment!.name = self.garmentName.text
-        self.garment!.type = self.garmentTypeLabel.text
-        self.garment!.color = self.garmentColorLabel.text
+        let alert = UIAlertController(title: "Añadir nueva prenda",
+                                      message: "¿Está todo correcto?",
+                                      preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel,
+                                         handler: { (action: UIAlertAction!) in
+        })
+        alert.addAction(cancelAction)
+        
+        if self.garmentName.text != "" {
+            self.garment!.name = self.garmentName.text
+        }
+        else {
+            alert.message = "Debe introducir el nombre de la prenda"
+        }
+        
+        if self.garmentTypeLabel.text != "Tipo de la prenda" {
+            self.garment!.type = self.garmentTypeLabel.text
+        }
+        else {
+            alert.message = "Debe introducir el tipo de la prenda"
+        }
+        
+        if self.garmentColorLabel.text != "Color de la prenda" {
+            self.garment!.color = self.garmentColorLabel.text
+        }
+        else {
+            alert.message = "Debe introducir el color de la prenda"
+        }
+        
         let targetSize = CGSize(width: 120, height: 100)
-        self.garment!.image = attachedPhoto.image?.scalePreservingAspectRatio(targetSize: targetSize)
+        
+        if self.attachedPhoto.image != nil {
+            self.garment!.image = attachedPhoto.image?.scalePreservingAspectRatio(targetSize: targetSize)
+        }
+        else {
+            alert.message = "Debe introducir una imagen para la prenda"
+        }
+        
+        if self.garmentName.text == "" || self.garmentTypeLabel.text == "Tipo de la prenda" || self.garmentColorLabel.text == "Color de la prenda" || self.attachedPhoto.image == nil {
+                present(alert,
+                        animated: true,
+                        completion: nil)
+        }
+        else {
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
         self.garment!.user = self.usuario.user
         
         self.usuario.user.addToGarments(garment!)

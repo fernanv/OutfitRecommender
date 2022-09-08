@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import CHTCollectionViewWaterfallLayout
 import LocationPickerViewController
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, LocationPickerDelegate {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, LocationPickerDelegate, CHTCollectionViewDelegateWaterfallLayout {
     
     @IBOutlet weak var weatherView: UIView!
     @IBOutlet weak var weatherCollectionView: UICollectionView!
@@ -17,7 +18,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     @IBOutlet weak var garmentsCollectionView: UICollectionView!
     
-    var usuario: UserViewModel
+    var usuario: UserViewModel!
     
     var selectedGarment: Garment?
     var selectedWeatherDay: DailyForecasts?
@@ -63,7 +64,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return garmentsAlert
     }
     
-    init(usuario: UserViewModel) {
+    /*init(usuario: UserViewModel) {
         self.usuario = usuario
         
         super.init(nibName: nil, bundle: nil)
@@ -71,7 +72,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
     
     /*
         Necesario para poder acceder al usuario sin que esté vacío y
@@ -142,6 +143,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.usuarioLogueado = true
             self.adviseLabel.isHidden = false
             
+            print("LAS PRENDAS DEL USUARIO")
+            print(self.usuario.user.garments!)
+            print("EL NOMBRE DEL USUARIO")
+            print(self.usuario.nombre)
+            
             self.outfitButton.removeTarget(self, action: #selector(login), for: .touchUpInside)
             self.outfitButton.titleLabel?.numberOfLines = 1
             self.outfitButton.setTitle("Cargar Outfit",
@@ -170,7 +176,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             self.outfitButton.titleLabel?.font = .systemFont(ofSize: 40)
         }
         
-        self.garmentsCollectionView?.collectionViewLayout = MosaicLayout()
+        //self.garmentsCollectionView?.collectionViewLayout = MosaicLayout()
+        let layout = CHTCollectionViewWaterfallLayout()
+        layout.itemRenderDirection = .leftToRight
+        layout.columnCount = 2
+        self.garmentsCollectionView?.collectionViewLayout = layout
+       
+        self.garmentsCollectionView?.register(GarmentCollectionViewCell.self, forCellWithReuseIdentifier: GarmentCollectionViewCell.id)
+        
         self.garmentsCollectionView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.garmentsCollectionView?.alwaysBounceVertical = true
         self.garmentsCollectionView?.indicatorStyle = .white
@@ -353,11 +366,14 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             return cell
         }
         else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "outfitCollectionCell", for: indexPath)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GarmentCollectionViewCell.id, for: indexPath) as? GarmentCollectionViewCell else {
+                fatalError()
+            }
             if outfit!.count > 0 {
-                let imageView = UIImageView(image: self.outfit?[indexPath.item].image)
-                imageView.frame = cell.frame
-                cell.backgroundView = imageView
+                //let imageView = UIImageView(image: self.outfit?[indexPath.item].image)
+                cell.configure(image: self.outfit?[indexPath.item].image)
+                //imageView.frame = cell.frame
+                //cell.backgroundView = imageView
             }
             return cell
         }
@@ -592,6 +608,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.outfit?.append(camiseta)
             }
         }
+    }
+    
+    // MARK: - CHTCollectionViewDelegateWaterfallLayout methods
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.garmentsCollectionView.frame.size.width/2, height: 200)
     }
     
     // MARK: - getGarmentsByType(type: String) : Obtiene todas las prendas de un tipo dado

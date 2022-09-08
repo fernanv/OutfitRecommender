@@ -11,11 +11,11 @@ import CoreData
 
 class UserViewController : UIViewController {
     
-    var user: UserViewModel
+    var user: UserViewModel!
 
     var viewCtrl: UIHostingController<Login>?
     
-    init(user: UserViewModel) {
+    /*init(user: UserViewModel) {
         self.user = user
         
         super.init(nibName: nil, bundle: nil)
@@ -23,7 +23,7 @@ class UserViewController : UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()

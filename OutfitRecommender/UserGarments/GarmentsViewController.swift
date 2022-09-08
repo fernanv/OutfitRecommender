@@ -59,7 +59,7 @@ class GarmentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    var usuario: UserViewModel
+    var usuario: UserViewModel!
     
     var managedContext: NSManagedObjectContext! {
         get
@@ -90,7 +90,7 @@ class GarmentsViewController: UIViewController, UITableViewDataSource, UITableVi
                                         width: 200,
                                         height: 60))
     
-    init(usuario: UserViewModel) {
+    /*init(usuario: UserViewModel) {
         self.usuario = usuario
         
         super.init(nibName: nil, bundle: nil)
@@ -98,7 +98,7 @@ class GarmentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
     
     // MARK: UIViewController methods
     
@@ -139,6 +139,8 @@ class GarmentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.usuario.getUserByEmail(email: self.usuario.email)
         
         navigationController?.navigationBar.barTintColor = UIColor(cgColor: CGColor(red: 159/255.0, green: 129/255.0, blue: 159/255.0, alpha: 1.0))
         // Register the custom header view.

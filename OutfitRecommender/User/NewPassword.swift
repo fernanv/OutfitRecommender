@@ -132,7 +132,7 @@ struct NewPassword: View {
     }
     
     struct NewPassword_Previews: PreviewProvider {
-        static var usuario = UserViewModel(coreDataStack: CoreDataStack())
+        static var usuario = UserViewModel()
         static var previews: some View {
             NewPassword(usuario: self.usuario)
         }

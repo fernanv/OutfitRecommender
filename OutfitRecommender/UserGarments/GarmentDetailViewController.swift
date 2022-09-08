@@ -11,14 +11,7 @@ import DropDown
 
 class GarmentDetailViewController: UIViewController {
     
-    var user: UserViewModel
-    
-    var managedContext: NSManagedObjectContext! {
-        get
-        {
-            return user.coreDataStack.context
-        }
-    }
+    var user: UserViewModel!
     
     var garment: Garment!
     var garmentTypes: [String]!
@@ -33,7 +26,7 @@ class GarmentDetailViewController: UIViewController {
     let dropDownTypes = DropDown()
     let dropDownColors = DropDown()
     
-    init(user: UserViewModel) {
+    /*init(user: UserViewModel) {
         self.user = user
         
         super.init(nibName: nil, bundle: nil)
@@ -41,7 +34,7 @@ class GarmentDetailViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +85,6 @@ class GarmentDetailViewController: UIViewController {
         let deleteAction = UIAlertAction(title: "Delete",
                                        style: .destructive,
                                        handler: { (action: UIAlertAction!) in
-    
                                         self.deleteItem()
         })
         
@@ -116,8 +108,8 @@ class GarmentDetailViewController: UIViewController {
     
     // MARK: - deleteItem
     private func deleteItem() {
-        managedContext.delete(garment)
-        user.coreDataStack.saveContext()
+        self.user.coreDataStack.context.delete(garment)
+        self.user.coreDataStack.saveContext()
         navigationController?.popViewController(animated: true)
     }
     

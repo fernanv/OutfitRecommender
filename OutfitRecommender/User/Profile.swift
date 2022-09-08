@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct Profile: View {
     
     // Atributos compartidos por otras vistas
@@ -89,6 +88,9 @@ struct Profile: View {
                 }
                 
             } // FIN CONTENIDO
+            .onAppear() {
+                self.usuario.getUserByEmail(email: self.usuario.email)
+            }
             
             if self.usuario.cargando{
                 VistaCargando().frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -108,7 +110,7 @@ struct Profile: View {
     }
 
     struct Profile_Previews: PreviewProvider {
-        static var usuario = UserViewModel(coreDataStack: CoreDataStack())
+        static var usuario = UserViewModel()
         static var previews: some View {
             Group {
                 Profile(login: Binding.constant(true), perfil: Binding.constant(false), usuario: self.usuario)

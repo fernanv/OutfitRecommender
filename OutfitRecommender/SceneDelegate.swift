@@ -11,17 +11,15 @@ import LocationPickerViewController
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let coreDataStack = CoreDataStack()
-    lazy var usuario = UserViewModel(coreDataStack: self.coreDataStack)
+    let usuario = UserViewModel()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        
         //self.usuario.cerrarSesion()
         
-       /* let tab = self.window?.rootViewController as! UITabBarController
+        let tab = self.window?.rootViewController as! UITabBarController
         tab.selectedIndex = 1
         
         let navigationController = tab.viewControllers?.last as! UINavigationController
@@ -34,7 +32,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let userController = tab.viewControllers?.first as! UserViewController
         userController.user = self.usuario
-        */
+        
+        /*let usuario = UserViewModel(coreDataStack: self.coreDataStack)
+        
+        let tab = self.window?.rootViewController as! UITabBarController
+        tab.selectedIndex = 1
+        
+        //let navigationController = tab.viewControllers?.last as! UINavigationController
+        
+        //let garmentsViewController = GarmentsViewController(usuario: usuario)
+        
+        let homeController = HomeViewController(usuario: usuario)
+        
+        tab.viewControllers?[1] = homeController
+
+        let userController = UserViewController(user: usuario)
+
+        tab.viewControllers?[0] = userController*/
+        
         guard let _ = (scene as? UIWindowScene) else { return }
  
     }
@@ -65,7 +80,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-        self.coreDataStack.saveContext()
+        self.usuario.coreDataStack.saveContext()
+        
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         

@@ -12,34 +12,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let coreDataStack = CoreDataStack()
-    var usuario : UserViewModel {
-        UserViewModel(coreDataStack: self.coreDataStack)
-    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let tab = self.window?.rootViewController as! UITabBarController
-        tab.selectedIndex = 1
-        
-        let navigationController = tab.viewControllers?.last as! UINavigationController
-        
-        let garmentsViewController = navigationController.topViewController as! GarmentsViewController
-        
-        let homeController = tab.viewControllers?[1] as! HomeViewController
-        
-        let userController = tab.viewControllers?.first as! UserViewController(user: self.usuario)
-        
-        let rootViewModel = TodoListViewModel(todoListStorage: todoListStorage)
-        let addTodoNoteViewModel = AddTodoNoteViewModel(todoListStorage: todoListStorage)
-        let rootVC = TodoListViewController(addTodoNoteViewModel: addTodoNoteViewModel, viewModel: rootViewModel)
-
-        window = UIWindow(frame: UIScreen.main.bounds)
-
-        window?.rootViewController = UINavigationController(rootViewController: rootVC)
-
-        window?.makeKeyAndVisible()
-
         
         return true
     }
@@ -67,12 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-        self.usuario.coreDataStack.saveContext()
+        //self.usuario.coreDataStack.saveContext()
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        self.usuario.coreDataStack.saveContext()
+        //self.usuario.coreDataStack.saveContext()
     }
 
     // MARK: - Core Data stack

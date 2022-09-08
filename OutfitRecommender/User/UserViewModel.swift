@@ -11,11 +11,11 @@ import CoreData
 
 final class UserViewModel : ObservableObject, Identifiable {
     
-    var coreDataStack : CoreDataStack
+    let coreDataStack = CoreDataStack()
     var user : User
     
     internal var id: String = "-1"
-    @Published var email: String = ""
+    //@Published var email: String = ""
     @Published var emailRegistro: String = ""
     @Published var claveRegistro: String = ""
     @Published var claveRepetida: String = ""
@@ -32,14 +32,15 @@ final class UserViewModel : ObservableObject, Identifiable {
     
     // Estado del usuario
     @AppStorage("estado") var estado = false
+    @AppStorage("email") var email: String = ""
     
-    init(coreDataStack: CoreDataStack){
-        self.coreDataStack = coreDataStack
+    init(){
         
         let userEntity = NSEntityDescription.entity(forEntityName: "User",
-                                                    in: coreDataStack.context)!
+                                                    in: self.coreDataStack.context)!
         
-        self.user = User(entity: userEntity, insertInto: coreDataStack.context)
+        self.user = User(entity: userEntity, insertInto: self.coreDataStack.context)
+        
         self.user.garments = []
         self.user.name = ""
         self.user.email = ""
@@ -72,7 +73,7 @@ final class UserViewModel : ObservableObject, Identifiable {
  
         self.getUserByEmail(email: self.email)
         
-        if user.name == "" {
+        if self.user.name == "" {
             withAnimation{
                  self.cargando = false
              }
@@ -87,11 +88,12 @@ final class UserViewModel : ObservableObject, Identifiable {
                  self.cargando = false
              }
 
-            self.nombre = user.name!
-            self.genero = user.gender!
-            self.email = user.email!
+            self.nombre = self.user.name!
+            self.genero = self.user.gender!
+            self.email = self.user.email!
             self.clave = self.user.password!
- 
+            self.id = self.user.objectID.description
+            
              // Cambiamos el estado del usuario a true
              withAnimation{
                  self.estado = true
@@ -183,9 +185,9 @@ final class UserViewModel : ObservableObject, Identifiable {
         var results: [User] = []
         
         let userEntity = NSEntityDescription.entity(forEntityName: "User",
-                                                    in: coreDataStack.context)!
+                                                    in: self.coreDataStack.context)!
         
-        let user = User(entity: userEntity, insertInto: coreDataStack.context)
+        let user = User(entity: userEntity, insertInto: self.coreDataStack.context)
         user.garments = []
         user.name = ""
         user.email = ""
@@ -195,8 +197,14 @@ final class UserViewModel : ObservableObject, Identifiable {
         
         do
         {
-            results = try coreDataStack.context.fetch(fetchRequest)
+            results = try self.coreDataStack.context.fetch(fetchRequest)
             self.user = results.first ?? user
+            
+            self.nombre = self.user.name!
+            self.genero = self.user.gender!
+            self.email = self.user.email!
+            self.clave = self.user.password!
+            self.id = self.user.objectID.description
         }
         catch let error as NSError
         {
@@ -239,6 +247,7 @@ final class UserViewModel : ObservableObject, Identifiable {
         self.user.password = hashed
         self.user.email = self.emailRegistro
         self.user.age = 20
+        self.id = self.user.objectID.description
         
         self.coreDataStack.saveContext()
         
@@ -323,6 +332,10 @@ final class UserViewModel : ObservableObject, Identifiable {
         
         // Presentación
         UIApplication.shared.keyWindow?.rootViewController?.present(alerta, animated: true)
+    }
+    
+    func recoverData() {
+        
     }
     
 }

@@ -151,7 +151,7 @@ struct Register: View {
     }
     
     struct Register_Previews: PreviewProvider {
-        static var usuario = UserViewModel(coreDataStack: CoreDataStack())
+        static var usuario = UserViewModel()
         static var previews: some View {
             Register(usuario: self.usuario)
         }

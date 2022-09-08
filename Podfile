@@ -12,4 +12,8 @@ target 'OutfitRecommender' do
 
   pod 'LocationPickerViewController'
 
+  pod 'Swinject'
+
+  pod 'CHTCollectionViewWaterfallLayout'
+
 end
